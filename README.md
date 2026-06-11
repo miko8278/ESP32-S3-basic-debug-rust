@@ -6,5 +6,8 @@ You need espflash:
 
 `cargo install espflash` or `cargo binstall espflash`
 
+Run with
+`cargo run --example example1`
+
 This does not include a display driver, I'm not sure
 weather somebody has already written one for the CYD in Rust.
