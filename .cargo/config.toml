@@ -1,0 +1,15 @@
+[target.xtensa-esp32s3-none-elf]
+runner = "espflash flash --monitor --chip esp32s3"
+
+[build]
+rustflags = [
+  "-C", "link-arg=-nostartfiles",
+
+  # Das bleibt hier stehen, da deine build.rs defmt.x NICHT automatisch linkt:
+  "-C", "link-arg=-Tdefmt.x",
+]
+
+target = "xtensa-esp32s3-none-elf"
+
+[unstable]
+build-std = ["core"]
